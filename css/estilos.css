@@ -1,0 +1,296 @@
+/* Reseteando */
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Serif JP", serif;
+}
+
+/* Version movile */
+
+/* Header o encabezado */
+.header {
+  background-image: url(../img/header.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 370px;
+  color: white;
+  padding: 1em;
+}
+
+/* logo */
+
+.menu > div {
+  float: right;
+}
+
+/* Menú hamburguesa */
+
+.menu-hamburger {
+  width: 100%;
+}
+
+.menu-hamburger label {
+  display: block;
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  border: 2px solid black;
+  color: #fff;
+  text-align: center;
+  background: rgb(255, 38, 0);
+}
+
+.menu-hamburger label:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.menu-hamburger label::before {
+  content: "";
+  width: 70%;
+  height: 3px;
+  margin: 10px auto;
+  display: block;
+  background: #fff;
+  box-shadow: 0 10px 0 #fff, 0 20px 0 #fff;
+}
+
+.menu-hamburger input[type="checkbox"]:checked ~ ul {
+  max-height: 500px;
+  transition: all 1s ease;
+}
+
+.menu-hamburger input[type="checkbox"] {
+  display: none;
+}
+
+.menu-hamburger ul {
+  padding: 1rem;
+  border-radius: 5px;
+  max-height: 0px;
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.menu-hamburger ul li {
+  height: 30px;
+  text-align: center;
+  margin: auto;
+  transition: all 1s ease;
+}
+
+.menu-hamburger ul a {
+  color: white;
+  font-weight: bold;
+}
+
+.menu-hamburger ul li:hover {
+  cursor: pointer;
+  background-color: rgb(255, 38, 0);
+  padding: 5px;
+  border-bottom: 1px solid gray;
+}
+
+/* contenido header h1 p y button */
+
+.header-text {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.header-text hr {
+  width: 50%;
+  margin: 5px auto;
+}
+
+.header-text p {
+  font-size: 0.9em;
+  margin-bottom: 20px;
+}
+
+.boton-header {
+  background-color: rgb(255, 38, 0);
+  border-radius: 9px;
+  padding: 4px;
+  margin-top: 10px;
+  font-size: 0.9em;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+}
+
+.boton-header:hover {
+  background-color: rgb(255, 38, 0);
+  opacity: 0.8;
+}
+
+/* Contenedor */
+
+.contenedor-principal {
+  width: 90%;
+  margin: 10px auto;
+}
+
+.contenido1 {
+  margin-top: 20px;
+}
+
+main .contenido1 h2 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+main .contenido1 p {
+  font-weight: unset;
+  color: rgb(255, 38, 0);
+  text-align: center;
+}
+
+.hr {
+  width: 70%;
+  margin: 5px auto;
+  height: 3px;
+  background-color: black;
+}
+
+/* Secciones */
+
+.seccion {
+  display: flex;
+  flex-direction: column;
+}
+
+.seccion div h3 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.seccion div p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.seccion .img img {
+  width: 100%;
+}
+
+/* Redes sociales */
+.redes-sociales {
+  text-align: center;
+}
+
+.redes-sociales p {
+  margin-top: 10px;
+}
+
+.redes-sociales .redes {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.redes-sociales .redes a {
+  margin: 0 30px;
+}
+
+.redes-sociales .redes a i {
+  font-size: 3rem;
+  color: black;
+}
+
+.footer {
+  background-color: rgb(255, 38, 0);
+  height: 150px;
+  color: #fff;
+  line-height: 150px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Version desktop */
+
+@media only screen and (min-width: 1200px) {
+  .menu > div {
+    float: left;
+  }
+
+  .menu-hamburger label,
+  .menu-hamburger #desplegar {
+    display: none;
+  }
+
+  .menu-hamburger ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .menu-hamburger ul a {
+    margin-top: 10px;
+    padding-right: 22px;
+  }
+
+  .menu-hamburger ul a:last-of-type {
+    margin-right: 30px;
+  }
+
+  .menu-hamburger ul a li {
+    font-size: 1.2rem;
+  }
+
+  .menu-hamburger ul li {
+    transition: none;
+    background-color: rgb(255, 38, 0);
+    padding: 1px 3px;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .menu-hamburger ul li:hover {
+    cursor: pointer;
+    background-color: rgb(255, 38, 0);
+    padding: 2px 4px;
+    opacity: 0.8;
+    border-bottom: none;
+  }
+
+  /* contenido header h1 p y button */
+
+  .header-text {
+    margin-top: 70px;
+  }
+
+  .header-text h1 {
+    font-size: 2.5em;
+  }
+
+  .header-text p {
+    font-size: 1.5em;
+  }
+
+  .boton-header {
+    font-size: 1.5em;
+  }
+
+  /* Secciones */
+
+  .seccion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .seccion-desktop {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
